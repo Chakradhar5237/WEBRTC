@@ -1,0 +1,91 @@
+/* Container for the whole meeting room */
+.meeting-room-container {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.meeting-room-container h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #3e3e3e;
+}
+
+.meeting-room-container p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Flex container to hold video containers */
+.meeting-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    align-items: center;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Allows wrapping when needed on smaller screens */
+}
+
+/* Individual video containers */
+.video-container {
+    width: 30%; /* Ensures that each container occupies 48% of the available space */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title for the video container */
+.video-container h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+/* Video element styles */
+.video-player {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Start button */
+.start-btn {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-btn:hover {
+    background-color: #0056b3;
+}
+
+.start-btn:focus {
+    outline: none;
+}
+
+/* Ensuring the containers are responsive on smaller screens */
+@media (max-width: 768px) {
+    .video-container {
+        width: 100%; /* Stack videos vertically on small screens */
+    }
+}
